@@ -1,0 +1,10 @@
+server:
+  port: 30112
+
+# spring 配置
+spring:
+  application:
+    name: alinesno-infra-base-id-boot
+  devtools:
+    restart:
+      enabled: true
