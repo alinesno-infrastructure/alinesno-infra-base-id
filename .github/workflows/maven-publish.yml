@@ -152,5 +152,5 @@ jobs:
                         -Ddocker.registry.name=${{ env.ALIYUN_CR_NAMESPACE }} \
                         -Djib.to.tags=${{ env.PRO_VERSION }}.${{ env.BUILD_NUMBER }} \
                         -Djib.to.auth.username=${{secrets.ALIYUN_CR_USERNAME}} \
-                        -Djib.to.auth.password=${{secrets.ALIYUN_CR_PASSWORD}} \\
+                        -Djib.to.auth.password=${{secrets.ALIYUN_CR_PASSWORD}} \
                         --settings nexus-config.xml
