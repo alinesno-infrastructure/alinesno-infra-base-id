@@ -148,16 +148,9 @@ jobs:
 
       - name: Deploy to AliyunCR
         run: |
-          mvn -B -U -f ${{ env.PROJECT_NAME }}/pom.xml clean compile jib:build \
+          mvn -B -U -f  ${{ env.PROJECT_NAME }}/pom.xml clean compile jib:build \
                         -Ddocker.registry.name=${{ env.ALIYUN_CR_NAMESPACE }} \
                         -Djib.to.tags=${{ env.PRO_VERSION }}.${{ env.BUILD_NUMBER }} \
                         -Djib.to.auth.username=${{secrets.ALIYUN_CR_USERNAME}} \
-                        -Djib.to.auth.password=${{secrets.ALIYUN_CR_PASSWORD}}
-
-      - name: Deploy demo to AliyunCR
-        run: |
-          mvn -B -U -f ${{ env.PROJECT_NAME_DEMO }}/pom.xml clean compile jib:build \
-                        -Ddocker.registry.name=${{ env.ALIYUN_CR_NAMESPACE }} \
-                        -Djib.to.tags=${{ env.PRO_VERSION }}.${{ env.BUILD_NUMBER }} \
-                        -Djib.to.auth.username=${{secrets.ALIYUN_CR_USERNAME}} \
-                        -Djib.to.auth.password=${{secrets.ALIYUN_CR_PASSWORD}}
+                        -Djib.to.auth.password=${{secrets.ALIYUN_CR_PASSWORD}} \\
+                        --settings nexus-config.xml
