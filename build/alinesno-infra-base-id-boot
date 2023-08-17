@@ -160,3 +160,59 @@ Caused by: org.redisson.client.RedisAuthRequiredException: NOAUTH Authentication
 2023-08-16T16:44:59.891+08:00  INFO 11912 --- [restartedMain] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 30112 (http)
 2023-08-16T16:44:59.919+08:00  INFO 11912 --- [restartedMain] c.a.infra.base.id.BaseIdApplication      : Started BaseIdApplication in 5.92 seconds (process running for 6.919)
 2023-08-16T16:50:26.952+08:00  INFO 11912 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.7.Final
+2023-08-16T22:09:47.893+08:00  INFO 5965 --- [restartedMain] c.a.infra.base.id.BaseIdApplication      : Starting BaseIdApplication using Java 17.0.1 with PID 5965 (/Users/luodong/GitRepository/alinesno-infra-base-id/alinesno-infra-base-id-boot/target/classes started by luodong in /Users/luodong/GitRepository/alinesno-infra-base-id)
+2023-08-16T22:09:47.897+08:00 DEBUG 5965 --- [restartedMain] c.a.infra.base.id.BaseIdApplication      : Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-08-16T22:09:47.898+08:00  INFO 5965 --- [restartedMain] c.a.infra.base.id.BaseIdApplication      : The following 5 profiles are active: "base", "security", "mybatis", "sa-token", "dev"
+2023-08-16T22:09:47.965+08:00  INFO 5965 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-16T22:09:47.965+08:00  INFO 5965 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-16T22:09:49.137+08:00  INFO 5965 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-08-16T22:09:49.140+08:00  INFO 5965 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-16T22:09:49.175+08:00  INFO 5965 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2023-08-16T22:09:50.000+08:00  WARN 5965 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-08-16T22:09:50.023+08:00  INFO 5965 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-08-16T22:09:50.024+08:00  INFO 5965 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2058 ms
+2023-08-16T22:09:50.199+08:00  WARN 5965 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'SegmentService' defined in file [/Users/luodong/GitRepository/alinesno-infra-base-id/alinesno-infra-base-id-facade/target/classes/com/alinesno/infra/base/id/service/SegmentService.class]: Failed to instantiate [com.alinesno.infra.base.id.service.SegmentService]: Constructor threw exception
+2023-08-16T22:09:50.220+08:00  INFO 5965 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-16T22:09:50.256+08:00 ERROR 5965 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'SegmentService' defined in file [/Users/luodong/GitRepository/alinesno-infra-base-id/alinesno-infra-base-id-facade/target/classes/com/alinesno/infra/base/id/service/SegmentService.class]: Failed to instantiate [com.alinesno.infra.base.id.service.SegmentService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.alinesno.infra.base.id.BaseIdApplication.main(BaseIdApplication.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.alinesno.infra.base.id.service.SegmentService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String, String)" because "properties" is null
+	at com.alinesno.infra.base.id.service.SegmentService.<init>(SegmentService.java:29)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198)
+	... 24 common frames omitted
+
