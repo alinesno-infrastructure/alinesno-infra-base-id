@@ -10,10 +10,13 @@ import com.sankuai.inf.leaf.exception.InitException;
 import com.sankuai.inf.leaf.segment.SegmentIDGenImpl;
 import com.sankuai.inf.leaf.segment.dao.IDAllocDao;
 import com.sankuai.inf.leaf.segment.dao.impl.IDAllocDaoImpl;
+import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -22,34 +25,42 @@ public class SegmentService {
     private Logger logger = LoggerFactory.getLogger(SegmentService.class);
 
     private IDGen idGen;
-    private DruidDataSource dataSource;
+//    private DruidDataSource dataSource;
+
+    @Autowired
+    private DataSource dataSource ;
+
+//    private SqlSession sqlSession ;
 
     public SegmentService() throws SQLException, InitException {
-        Properties properties = null ; // PropertyFactory.getProperties();
-        boolean flag = Boolean.parseBoolean(properties.getProperty(Constants.LEAF_SEGMENT_ENABLE, "true"));
-        if (flag) {
+
+//        dataSource = new DruidDataSource(sqlSession.getConnection()) ;
+//        Properties properties = null ; // PropertyFactory.getProperties();
+//        boolean flag = Boolean.parseBoolean(properties.getProperty(Constants.LEAF_SEGMENT_ENABLE, "true"));
+
+//        if (flag) {
             // Config dataSource
-            dataSource = new DruidDataSource();
-            dataSource.setUrl(properties.getProperty(Constants.LEAF_JDBC_URL));
-            dataSource.setUsername(properties.getProperty(Constants.LEAF_JDBC_USERNAME));
-            dataSource.setPassword(properties.getProperty(Constants.LEAF_JDBC_PASSWORD));
-            dataSource.init();
+//            dataSource = new DruidDataSource();
+//            dataSource.setUrl(properties.getProperty(Constants.LEAF_JDBC_URL));
+//            dataSource.setUsername(properties.getProperty(Constants.LEAF_JDBC_USERNAME));
+//            dataSource.setPassword(properties.getProperty(Constants.LEAF_JDBC_PASSWORD));
+//            dataSource.init();
 
             // Config Dao
-            IDAllocDao dao = new IDAllocDaoImpl(dataSource);
-
-            // Config ID Gen
-            idGen = new SegmentIDGenImpl();
-            ((SegmentIDGenImpl) idGen).setDao(dao);
-            if (idGen.init()) {
-                logger.info("Segment Service Init Successfully");
-            } else {
-                throw new InitException("Segment Service Init Fail");
-            }
-        } else {
+//            IDAllocDao dao = new IDAllocDaoImpl(dataSource);
+//
+//            // Config ID Gen
+//            idGen = new SegmentIDGenImpl();
+//            ((SegmentIDGenImpl) idGen).setDao(dao);
+//            if (idGen.init()) {
+//                logger.info("Segment Service Init Successfully");
+//            } else {
+//                throw new InitException("Segment Service Init Fail");
+//            }
+//        } else {
             idGen = new ZeroIDGen();
             logger.info("Zero ID Gen Service Init Successfully");
-        }
+//        }
     }
 
     public Result getId(String key) {

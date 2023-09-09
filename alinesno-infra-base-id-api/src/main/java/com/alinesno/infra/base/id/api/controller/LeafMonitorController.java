@@ -1,10 +1,10 @@
 package com.alinesno.infra.base.id.api.controller;
 
 import com.alinesno.infra.base.id.model.SegmentBufferView;
+import com.alinesno.infra.base.id.service.SegmentService;
 import com.sankuai.inf.leaf.segment.SegmentIDGenImpl;
 import com.sankuai.inf.leaf.segment.model.LeafAlloc;
 import com.sankuai.inf.leaf.segment.model.SegmentBuffer;
-import com.sankuai.inf.leaf.service.SegmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

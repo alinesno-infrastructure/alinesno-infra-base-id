@@ -2,10 +2,10 @@ package com.alinesno.infra.base.id.api.controller;
 
 import com.alinesno.infra.base.id.api.exception.LeafServerException;
 import com.alinesno.infra.base.id.api.exception.NoKeyException;
+import com.alinesno.infra.base.id.service.SegmentService;
+import com.alinesno.infra.base.id.service.SnowflakeService;
 import com.sankuai.inf.leaf.common.Result;
 import com.sankuai.inf.leaf.common.Status;
-import com.sankuai.inf.leaf.service.SegmentService;
-import com.sankuai.inf.leaf.service.SnowflakeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +19,7 @@ public class LeafController {
 
     @Autowired
     private SegmentService segmentService;
+
     @Autowired
     private SnowflakeService snowflakeService;
 
