@@ -1,1 +1,1 @@
-package com.alinesno.infra.base.cms.entity;
+package com.alinesno.infra.base.id.entity;

@@ -1,1 +1,1 @@
-package com.alinesno.infra.base.cms.api.provider;
+package com.alinesno.infra.base.id.api.controller;
