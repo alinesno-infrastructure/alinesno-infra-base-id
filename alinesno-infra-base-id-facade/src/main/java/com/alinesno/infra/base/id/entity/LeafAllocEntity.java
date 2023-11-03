@@ -1,5 +1,8 @@
 package com.alinesno.infra.base.id.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
+import lombok.Data;
 import com.alinesno.infra.common.facade.mapper.entity.InfraBaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -27,76 +30,45 @@ import java.sql.Timestamp;
  * @version 1.0.0
  */
 @TableName("leaf_alloc")
+@Data
 public class LeafAllocEntity extends InfraBaseEntity {
     /**
      * 业务标签
      */
     @TableField("biz_tag")
+	@ColumnType(length=50)
+	@ColumnComment("业务标签")
     private String bizTag;
 
     /**
      * 最大ID
      */
     @TableField("max_id")
+	@ColumnType(length=10)
+	@ColumnComment("最大ID")
     private Long maxId;
 
     /**
      * 步长
      */
     @TableField("step")
+	@ColumnType(length=255)
+	@ColumnComment("步长")
     private Integer step;
 
     /**
      * 描述
      */
     @TableField("description")
+	@ColumnType(length=255)
+	@ColumnComment("描述")
     private String description;
 
     /**
      * 更新时间
      */
     @TableField("update_time")
+	@ColumnType(length=19)
+	@ColumnComment("更新时间")
     private Timestamp updateTime;
-
-    // getter and setter methods
-
-    public String getBizTag() {
-        return bizTag;
-    }
-
-    public void setBizTag(String bizTag) {
-        this.bizTag = bizTag;
-    }
-
-    public Long getMaxId() {
-        return maxId;
-    }
-
-    public void setMaxId(Long maxId) {
-        this.maxId = maxId;
-    }
-
-    public Integer getStep() {
-        return step;
-    }
-
-    public void setStep(Integer step) {
-        this.step = step;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Timestamp getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-        this.updateTime = updateTime;
-    }
 }
