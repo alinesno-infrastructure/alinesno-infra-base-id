@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/dev_alinesno_infra_base_id_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
     username: root
-    password: 123456
+    password: adminer
   data:
     redis:
       host: 127.0.0.1
@@ -18,6 +18,18 @@ spring:
   devtools:
     restart:
       enabled: true
+      
+actable:
+  table:
+    auto: update
+  model:
+    pack: com.alinesno.infra.base.id.entity;
+  database:
+    type: mysql
+  index:
+    prefix: alinesno_base_id_idx_
+  unique:
+    prefix: alinesno_base_id_uni_
 
 # sa-token配置
 sa-token:
