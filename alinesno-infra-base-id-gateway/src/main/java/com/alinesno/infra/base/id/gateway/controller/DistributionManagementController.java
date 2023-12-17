@@ -1,7 +1,7 @@
-package com.alinesno.infra.base.id.api.controller;
+package com.alinesno.infra.base.id.gateway.controller;
 
-import com.alinesno.infra.base.id.entity.ApplicationManagementEntity;
-import com.alinesno.infra.base.id.service.IApplicationManagementService;
+import com.alinesno.infra.base.id.entity.DistributionManagementEntity;
+import com.alinesno.infra.base.id.service.IDistributionManagementService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
@@ -20,26 +20,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 处理与ApplicationManagementEntity相关的请求的Controller。
- * 继承自BaseController类并实现IApplicationManagementService接口。
+ * 处理与DistributionManagementEntity相关的请求的Controller。
+ * 继承自BaseController类并实现IDistributionManagementService接口。
  *
  * @author LuoXiaoDong
  * @version 1.0.0
  */
-@Api(tags = "ApplicationManagement")
+@Api(tags = "DistributionManagement")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/base/id/application_management")
-public class ApplicationManagementController extends BaseController<ApplicationManagementEntity, IApplicationManagementService> {
+@RequestMapping("/api/infra/base/id/distribution_management")
+public class DistributionManagementController extends BaseController<DistributionManagementEntity, IDistributionManagementService> {
 
     // 日志记录
-    private static final Logger log = LoggerFactory.getLogger(ApplicationManagementController.class);
+    private static final Logger log = LoggerFactory.getLogger(DistributionManagementController.class);
 
     @Autowired
-    private IApplicationManagementService service;
+    private IDistributionManagementService service;
 
     /**
-     * 获取ApplicationManagementEntity的DataTables数据。
+     * 获取DistributionManagementEntity的DataTables数据。
      *
      * @param request HttpServletRequest对象。
      * @param model   Model对象。
@@ -54,7 +54,7 @@ public class ApplicationManagementController extends BaseController<ApplicationM
     }
 
     @Override
-    public IApplicationManagementService getFeign() {
+    public IDistributionManagementService getFeign() {
         return this.service;
     }
 }

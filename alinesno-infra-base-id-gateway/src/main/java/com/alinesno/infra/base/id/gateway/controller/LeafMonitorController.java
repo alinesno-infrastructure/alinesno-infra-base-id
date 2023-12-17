@@ -1,4 +1,4 @@
-package com.alinesno.infra.base.id.api.controller;
+package com.alinesno.infra.base.id.gateway.controller;
 
 import com.alinesno.infra.base.id.model.SegmentBufferView;
 import com.alinesno.infra.base.id.service.SegmentService;

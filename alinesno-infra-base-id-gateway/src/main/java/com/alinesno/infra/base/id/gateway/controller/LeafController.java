@@ -1,7 +1,7 @@
-package com.alinesno.infra.base.id.api.controller;
+package com.alinesno.infra.base.id.gateway.controller;
 
-import com.alinesno.infra.base.id.api.exception.LeafServerException;
-import com.alinesno.infra.base.id.api.exception.NoKeyException;
+import com.alinesno.infra.base.id.gateway.exception.LeafServerException;
+import com.alinesno.infra.base.id.gateway.exception.NoKeyException;
 import com.alinesno.infra.base.id.service.SegmentService;
 import com.alinesno.infra.base.id.service.SnowflakeService;
 import com.sankuai.inf.leaf.common.Result;
