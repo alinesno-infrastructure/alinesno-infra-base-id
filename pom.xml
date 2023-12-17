@@ -25,12 +25,12 @@
         <module>alinesno-infra-base-id-facade</module>  <!-- 接口和引用 -->
         <module>alinesno-infra-base-id-domain</module>  <!-- 领域服务 -->
         <module>alinesno-infra-base-id-adapter</module> <!-- 适配层 -->
-        <module>alinesno-infra-base-id-api</module>  <!-- 接口服务 -->
+        <module>alinesno-infra-base-id-gateway</module>  <!-- 接口服务 -->
         <module>alinesno-infra-base-id-client</module>  <!-- 对外引用 -->
         <module>alinesno-infra-base-id-boot</module>  <!-- 启动服务 -->
 
         <!-- 前端服务
-        <module>alinesno-infra-base-id-admin</module>
+        <module>alinesno-infra-base-id-ui</module>
         -->
     </modules>
 

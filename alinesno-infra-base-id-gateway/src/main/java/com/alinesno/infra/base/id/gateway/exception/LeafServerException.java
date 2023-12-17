@@ -1,4 +1,4 @@
-package com.alinesno.infra.base.id.api.exception;
+package com.alinesno.infra.base.id.gateway.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

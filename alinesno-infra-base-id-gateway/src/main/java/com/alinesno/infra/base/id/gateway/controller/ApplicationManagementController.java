@@ -1,7 +1,7 @@
-package com.alinesno.infra.base.id.api.controller;
+package com.alinesno.infra.base.id.gateway.controller;
 
-import com.alinesno.infra.base.id.entity.IdGenerationStrategyEntity;
-import com.alinesno.infra.base.id.service.IIdGenerationStrategyService;
+import com.alinesno.infra.base.id.entity.ApplicationManagementEntity;
+import com.alinesno.infra.base.id.service.IApplicationManagementService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
@@ -20,26 +20,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 处理与IdGenerationStrategyEntity相关的请求的Controller。
- * 继承自BaseController类并实现IIdGenerationStrategyService接口。
+ * 处理与ApplicationManagementEntity相关的请求的Controller。
+ * 继承自BaseController类并实现IApplicationManagementService接口。
  *
  * @author LuoXiaoDong
  * @version 1.0.0
  */
-@Api(tags = "IdGenerationStrategy")
+@Api(tags = "ApplicationManagement")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/base/id/id_generation_strategy")
-public class IdGenerationStrategyController extends BaseController<IdGenerationStrategyEntity, IIdGenerationStrategyService> {
+@RequestMapping("/api/infra/base/id/application_management")
+public class ApplicationManagementController extends BaseController<ApplicationManagementEntity, IApplicationManagementService> {
 
     // 日志记录
-    private static final Logger log = LoggerFactory.getLogger(IdGenerationStrategyController.class);
+    private static final Logger log = LoggerFactory.getLogger(ApplicationManagementController.class);
 
     @Autowired
-    private IIdGenerationStrategyService service;
+    private IApplicationManagementService service;
 
     /**
-     * 获取IdGenerationStrategyEntity的DataTables数据。
+     * 获取ApplicationManagementEntity的DataTables数据。
      *
      * @param request HttpServletRequest对象。
      * @param model   Model对象。
@@ -54,7 +54,7 @@ public class IdGenerationStrategyController extends BaseController<IdGenerationS
     }
 
     @Override
-    public IIdGenerationStrategyService getFeign() {
+    public IApplicationManagementService getFeign() {
         return this.service;
     }
 }
