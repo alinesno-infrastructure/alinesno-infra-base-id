@@ -12,11 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author LuoAnDong
  * @since 2023年8月3日 上午6:23:43
  */
-@EnableActable
-@EnableInfraSsoApi
-@EnableLeafServer
 @SpringBootApplication
-@MapperScan("com.alinesno.infra.base.id.mapper")
 public class BaseIdApplication {
 
 	public static void main(String[] args) {
