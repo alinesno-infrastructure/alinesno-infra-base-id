@@ -85,57 +85,50 @@ export const constantRoutes = [
         meta: { title: '学习手册', icon: 'dashboard', affix: true }
       },
 
-      // ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      // >>>>>>>>>>>>>> sensitive_router_start >>>>>>>>>>>>>>>>>>>>>
       {
-        path: '/createGateway',
-        name: 'createGateway',
-        hidden: true,
-        component: () => import('@/views/gateway/createGateway'),
-        meta: { title: '创建网关服务', icon: 'dashboard', affix: true }
+        path: '/base/id/application/index',
+        component: () => import('@/views/base/id/application/index'),
+        name: '/base/id/application/index',
+        meta: { title: '应用管理', icon: 'dashboard', affix: true }
       },
       {
-        path: '/gatewayTopology',
-        name: 'gatewayTopology',
-        hidden: true,
-        component: () => import('@/views/gateway/gatewayTopology'),
-        meta: { title: '网关路由拓扑结构', icon: 'dashboard', affix: true }
+        path: '/base/id/tags/index',
+        component: () => import('@/views/base/id/tags/index'),
+        name: '/base/id/tags/index',
+        meta: { title: '标签管理', icon: 'dashboard', affix: true }
       },
       {
-        path: '/createClient',
-        name: 'createClient',
-        hidden: true,
-        component: () => import('@/views/gateway/createClient'),
-        meta: { title: '创建客户端', icon: 'dashboard', affix: true }
+        path: '/base/id/word/index',
+        component: () => import('@/views/base/id/word/index'),
+        name: '/base/id/word/index',
+        meta: { title: '敏感词管理', icon: 'dashboard', affix: true }
       },
       {
-        path: '/addGatewayClient',
-        name: 'addGatewayClient',
-        hidden: true,
-        component: () => import('@/views/gateway/addGatewayClient'),
-        meta: { title: '添加网关客户端', icon: 'dashboard', affix: true }
+        path: '/base/id/record/index',
+        component: () => import('@/views/base/id/record/index'),
+        name: '/base/id/record/index',
+        meta: { title: '请求日志', icon: 'dashboard', affix: true }
       },
       {
-        path: '/addClientGateway',
-        name: 'addClientGateway',
-        hidden: true,
-        component: () => import('@/views/gateway/addClientGateway'),
-        meta: { title: '添加客户端网关', icon: 'dashboard', affix: true }
+        path: '/base/id/analyse/index',
+        component: () => import('@/views/base/id/analyse/index'),
+        name: '/base/id/analyse/index',
+        meta: { title: '统计分析', icon: 'dashboard', affix: true }
       },
       {
-        path: '/addGroovyScript',
-        name: 'addGroovyScript',
-        hidden: true,
-        component: () => import('@/views/gateway/addGroovyScript'),
-        meta: { title: '添加规则组件', icon: 'dashboard', affix: true }
+        path: '/base/id/config/index',
+        component: () => import('@/views/base/id/config/index'),
+        name: '/base/id/config/index',
+        meta: { title: '敏感词管理', icon: 'dashboard', affix: true }
       },
       {
-        path: '/createBalanced',
-        name: 'createBalanced',
-        hidden: true,
-        component: () => import('@/views/gateway/createBalanced'),
-        meta: { title: '创建负载均衡', icon: 'dashboard', affix: true }
-      },
-
+        path: '/base/id/filter/index',
+        component: () => import('@/views/base/id/filter/index'),
+        name: '/base/id/filter/index',
+        meta: { title: '过滤规则配置', icon: 'dashboard', affix: true }
+      }
+      // >>>>>>>>>>>>>> sensitive_router_end >>>>>>>>>>>>>>>>>>>>>
 
     ]
   },

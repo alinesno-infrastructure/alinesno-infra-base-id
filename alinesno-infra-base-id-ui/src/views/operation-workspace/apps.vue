@@ -12,8 +12,9 @@
                   <li class="box-item" v-for="item in directContent" :key="item">
                     <div class="dire-panel">
                       <div class="panel-title">
-                        <img class="dire-panel-icon" :src="item.icon" :alt="item.name" />
-                        {{ item.name }} 
+                        <!-- <img class="dire-panel-icon" :src="item.icon" :alt="item.name" /> -->
+                        <i class="dire-panel-icon" :class="item.icon" :alt="item.name" />
+                        {{ item.name }}
                       </div>
                       <div class="panel-describe">通过简单几步，图中7种主流开发环境轻松部署，摆脱海量文档搜索之苦。</div>
                       <div class="panel-tip">访问链接</div>
@@ -56,12 +57,13 @@
 <script setup>
 
 const directContent = ref([
-  { icon: 'https://d1by4p17n947rt.cloudfront.net/icon/d88319dfa5d204f019b4284149886c59-7d586ea82f792b61a8c87de60565133d.svg', name: '快速搭建网站', desc: 'With EC2 (2 分钟)' },
-  { icon: 'https://d1by4p17n947rt.cloudfront.net/icon/f5d2c00d40914bff4f82f29f9ef768bc-53a84099cf556710383a52b4612a8612.svg', name: '部署开发环境', desc: 'With Route 53 (3 分钟)' },
-  { icon: 'https://d1by4p17n947rt.cloudfront.net/icon/3da5e8169d2f1426f99fbef54575fe96-6382cb2dfdd2f74c99bc8a64a338358e.svg', name: '搭建云上博客', desc: 'With Route 53 (3 分钟)' },
-  { icon: 'https://d1by4p17n947rt.cloudfront.net/icon/fb0cde6228b21d89ec222b45efec54e7-0856e92285f4e7ed254b2588d1fe1829.svg', name: '搭建小程序', desc: 'With Route 53 (3 分钟)' },
-  { icon: 'https://d1by4p17n947rt.cloudfront.net/icon/a5ffe5487f62ef75d8e5cf78c18525a5-d4867f9d4adcd749f0c5aff987232847.svg', name: '云上高可用架构', desc: 'With Route 53 (3 分钟)' },
+  { id: '1', icon: 'fa-brands fa-slack', name: '智能鉴黄', desc: '识别文本中的色情行为描述、色情资源链接、低俗交友、污秽文爱等涉黄内容' },
+  { id: '2', icon: 'fa-solid fa-list-check', name: '违禁违规', desc: '识别暴力行为、恐怖描述、赌博、毒品、枪支弹药等违禁文字内容' },
+  { id: '3', icon: 'fa-solid fa-at', name: '恶意推广', desc: '识别带有售卖意向的软文广告、微信/QQ/联系方式等违规广告，支持包含符号、图标等变异广告' },
+  { id: '4', icon: 'fa-solid fa-list-check', name: '低俗辱骂', desc: '识别文本中的侮辱谩骂、人身攻击、消极宣泄等不良内容' },
+  { id: '5', icon: 'fa-solid fa-file-word', name: '低质灌水', desc: '识别网络社区常见的乱码、水帖、刷屏等无意义的灌水信息' },
 ]);
+
 
 const apps = ref([
   { icon: 'https://d1by4p17n947rt.cloudfront.net/icon/051de32597041e41f73b97d61c67a13b-9cbdaf85e3bcf29b656fdedd8e6d1305.svg', name: '构建 Web 应用程序', desc: 'With Route 53 (3 分钟)' },
