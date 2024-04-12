@@ -9,7 +9,7 @@ import { parseStrEmpty } from "@/utils/ruoyi";
  */
 
 // 接口配置项
-var prefix = '/api/infra/base/id/registeredApp/' ;
+var prefix = '/api/infra/base/id/application/' ;
 var managerUrl = {
     datatables : prefix +"datatables" ,
     createUrl: prefix + 'add' ,

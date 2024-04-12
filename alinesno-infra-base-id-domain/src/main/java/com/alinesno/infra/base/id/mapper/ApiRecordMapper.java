@@ -1,7 +1,9 @@
 package com.alinesno.infra.base.id.mapper;
 
-import com.alinesno.infra.base.id.entity.RequestRecordEntity;
+import com.alinesno.infra.base.id.entity.ApiRecordEntity;
 import com.alinesno.infra.common.facade.mapper.repository.IBaseMapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -11,6 +13,6 @@ import com.alinesno.infra.common.facade.mapper.repository.IBaseMapper;
  * @author LuoXiaoDong
  * @version 1.0.0
  */
-public interface RequestRecordMapper extends IBaseMapper<RequestRecordEntity> {
+public interface ApiRecordMapper extends IBaseMapper<ApiRecordEntity> {
 
 }

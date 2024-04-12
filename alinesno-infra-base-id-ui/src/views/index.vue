@@ -25,10 +25,10 @@
   </el-row>
 
     <!-- 应用统计 -->
-    <OperationWorkspaceCountStaitcs />
+    <!-- <OperationWorkspaceCountStaitcs /> -->
 
     <!-- 应用套件和状态 -->
-    <!-- <OperationWorkspaceService /> -->
+    <OperationWorkspaceService />
 
     <!-- 运行应用列表 -->
     <OperationWorkspaceApps />
@@ -41,7 +41,7 @@
 
 import OperationWorkspaceCountStaitcs from './operation-workspace/countStatics.vue'
 import OperationWorkspaceApps from './operation-workspace/apps.vue'
-// import OperationWorkspaceService from './operation-workspace/service.vue'
+import OperationWorkspaceService from './operation-workspace/service.vue'
 
 const currentEnvClusterObj = ref({
   appName : '分布式ID服务'  ,

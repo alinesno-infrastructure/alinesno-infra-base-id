@@ -25,7 +25,7 @@ const menuItems = ref([
   {id:'2' , icon:'fa-brands fa-slack' , link:'/base/id/application/index' , desc:'应用管理'},
   {id:'4' , icon:'fa-solid fa-at' , link:'/base/id/config/index' , desc:'业务管理'},
   {id:'7' , icon:'fa-solid fa-user-shield' , link:'/base/id/filter/index' , desc:'ID生成策略'}, 
-  {id:'8' , icon:'fa-solid fa-file-word' , link:'/base/id/record/index' , desc:'请求日志'}, 
+  {id:'8' , icon:'fa-solid fa-file-word' , link:'/base/id/apiRecord/index' , desc:'请求日志'}, 
 ]);
 
 // 打开服务市场

@@ -1,16 +1,15 @@
 package com.alinesno.infra.base.id.gateway.controller;
 
-import com.alinesno.infra.base.id.entity.RequestRecordEntity;
-import com.alinesno.infra.base.id.service.IRequestRecordService;
+import com.alinesno.infra.base.id.entity.ApplicationEntity;
+import com.alinesno.infra.base.id.service.IApplicationService;
 import com.alinesno.infra.common.core.constants.SpringInstanceScope;
 import com.alinesno.infra.common.facade.pageable.DatatablesPageBean;
 import com.alinesno.infra.common.facade.pageable.TableDataInfo;
 import com.alinesno.infra.common.web.adapter.rest.BaseController;
 import io.swagger.annotations.Api;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.builder.ToStringBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.ui.Model;
@@ -20,26 +19,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 处理与RequestRecordEntity相关的请求的Controller。
- * 继承自BaseController类并实现IRequestRecordService接口。
+ * 处理与ApplicationEntity相关的请求的Controller。
+ * 继承自BaseController类并实现IApplicationService接口。
  *
  * @author LuoXiaoDong
  * @version 1.0.0
  */
-@Api(tags = "RequestRecord")
+@Slf4j
+@Api(tags = "Application")
 @RestController
 @Scope(SpringInstanceScope.PROTOTYPE)
-@RequestMapping("/api/infra/base/id/request_record")
-public class RequestRecordController extends BaseController<RequestRecordEntity, IRequestRecordService> {
-
-    // 日志记录
-    private static final Logger log = LoggerFactory.getLogger(RequestRecordController.class);
+@RequestMapping("/api/infra/base/id/application")
+public class ApplicationController extends BaseController<ApplicationEntity, IApplicationService> {
 
     @Autowired
-    private IRequestRecordService service;
+    private IApplicationService service;
 
     /**
-     * 获取RequestRecordEntity的DataTables数据。
+     * 获取ApplicationEntity的DataTables数据。
      *
      * @param request HttpServletRequest对象。
      * @param model   Model对象。
@@ -54,7 +51,7 @@ public class RequestRecordController extends BaseController<RequestRecordEntity,
     }
 
     @Override
-    public IRequestRecordService getFeign() {
+    public IApplicationService getFeign() {
         return this.service;
     }
 }
